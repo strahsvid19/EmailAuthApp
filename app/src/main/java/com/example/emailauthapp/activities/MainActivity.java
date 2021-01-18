@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.emailauthapp.activities.RegisterActivity;
 import com.example.emailauthapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding.signUpS.setOnClickListener(v -> {
             startActivity(new Intent(this, RegisterActivity.class));
-            finish();
         });
     }
 }
