@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.emailauthapp.databinding.ActivityRegisterBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {
 
     ActivityRegisterBinding binding;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +22,14 @@ public class RegisterActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
-        binding.signUpS.setOnClickListener(v -> {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
+        mAuth = FirebaseAuth.getInstance();
+
+        binding.btnReg.setOnClickListener(v -> {
+            if (Validators.validateInput(binding.email, binding.password, binding.confirmPassword)) {
+                RegisterUser.createNewUser(mAuth, this, binding.email, binding.password);
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+            }
         });
     }
 }
