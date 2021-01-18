@@ -40,7 +40,7 @@
                 android:layout_marginTop="20dp">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/name"
+                    android:id="@+id/email"
                     android:importantForAutofill="no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -81,13 +81,13 @@
                 android:id="@+id/sign_up_s"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/sign_up"
-                android:gravity="center"
                 android:layout_marginTop="35dp"
                 android:layout_marginEnd="20dp"
                 android:fontFamily="@font/poppins_semi_bold"
-                android:textSize="14sp"
-                android:textColor="@color/purple_200"/>
+                android:gravity="center"
+                android:text="@string/sign_up"
+                android:textColor="@color/teal_700"
+                android:textSize="14sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
