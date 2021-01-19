@@ -2,7 +2,6 @@ package com.example.emailauthapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -26,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         binding.btnReg.setOnClickListener(v -> {
             if (Validators.validateInput(binding.email, binding.password, binding.confirmPassword)) {
-                RegisterUser.createNewUser(this, mAuth, this, binding.email, binding.password);
+                User.createNewUser(this, mAuth, this, binding.email, binding.password);
             }
         });
     }

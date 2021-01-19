@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.btnStart.setOnClickListener(v -> {
-            RegisterUser.signInUser(this, FirebaseAuth.getInstance(),
+            User.signInUser(this, FirebaseAuth.getInstance(),
                     this, binding.email, binding.password);
         });
     }

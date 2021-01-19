@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class RegisterUser {
+public class User {
 
     public static void createNewUser (Activity a, FirebaseAuth mAuth, Context context, EditText email, EditText password) {
 
