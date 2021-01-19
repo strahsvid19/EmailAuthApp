@@ -1,10 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.HomeActivity"
+    android:background="@color/teal_200"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_700"
-    tools:context=".activities.HomeActivity">
+    android:gravity="center"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/usr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="@string/hi_user"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="@string/email_usr"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:paddingTop="45dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/id_usr"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_semi_bold"/>
+
+
+    <Button
+        android:id="@+id/btn_update_password"
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:text="@string/update_email"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btn_update_email"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="@string/update_password"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btn_log_out"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="@string/log_out"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:backgroundTint="@color/black"/>
+
+</LinearLayout>
