@@ -26,9 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         binding.btnReg.setOnClickListener(v -> {
             if (Validators.validateInput(binding.email, binding.password, binding.confirmPassword)) {
-                RegisterUser.createNewUser(mAuth, this, binding.email, binding.password);
-                startActivity(new Intent(this, MainActivity.class));
-                finish();
+                RegisterUser.createNewUser(this, mAuth, this, binding.email, binding.password);
             }
         });
     }

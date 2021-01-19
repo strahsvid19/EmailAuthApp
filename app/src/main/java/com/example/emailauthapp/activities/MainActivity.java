@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.emailauthapp.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
         binding.signUpS.setOnClickListener(v -> {
             startActivity(new Intent(this, RegisterActivity.class));
+        });
+
+        binding.btnStart.setOnClickListener(v -> {
+            RegisterUser.signInUser(this, FirebaseAuth.getInstance(),
+                    this, binding.email, binding.password);
         });
     }
 }
