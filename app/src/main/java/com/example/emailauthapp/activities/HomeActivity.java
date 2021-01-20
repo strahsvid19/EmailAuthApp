@@ -6,10 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.emailauthapp.databinding.ActivityHomeBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class HomeActivity extends AppCompatActivity {
 
     ActivityHomeBinding binding;
+
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,5 +23,19 @@ public class HomeActivity extends AppCompatActivity {
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
+        if (mUser != null) {
+            binding.emailHome.setText(String.format("Email - %s", mUser.getEmail()));
+            binding.idHome.setText(String.format("ID - %s", mUser.getUid()));
+        }
+
+        binding.btnLogOut.setOnClickListener(v -> {
+            mAuth.signOut();
+            finish();
+        });
+
     }
 }
