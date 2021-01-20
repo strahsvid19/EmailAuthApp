@@ -10,8 +10,8 @@
     <string name="sign_in">Already have an account? Sign in</string>
     <string name="register">Register</string>
     <string name="hi_user">Hi, User!</string>
-    <string name="email_usr">Your email address - email</string>
-    <string name="id_usr">Your ID - ID</string>
+    <string name="email_usr">Email address - email</string>
+    <string name="id_usr">ID - ID</string>
     <string name="log_out">Log out</string>
     <string name="update_email">Update email</string>
     <string name="update_password">Update password</string>
