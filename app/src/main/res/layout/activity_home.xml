@@ -19,18 +19,20 @@
         android:textSize="30sp"/>
 
     <TextView
+        android:id="@+id/email_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_semi_bold"
         android:text="@string/email_usr"
         android:gravity="center"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:paddingTop="45dp"/>
 
     <TextView
+        android:id="@+id/id_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:text="@string/id_usr"
         android:gravity="center"
         android:fontFamily="@font/poppins_semi_bold"/>
