@@ -11,29 +11,35 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class User {
 
-    public static void createNewUser (Activity a, FirebaseAuth mAuth, Context context, EditText email, EditText password) {
+    public static void createNewUser (Activity a, FirebaseAuth mAuth, EditText email, EditText password) {
 
-        mAuth.createUserWithEmailAndPassword(email.getText().toString().trim(), password.getText().toString())
+        String mEmail = email.getText().toString().trim();
+        String mPassword = password.getText().toString().trim();
+
+        mAuth.createUserWithEmailAndPassword(mEmail, mPassword)
                 .addOnCompleteListener(task -> {
                    if (task.isSuccessful()) {
-                       Toast.makeText(context, "Account has been created!", Toast.LENGTH_SHORT).show();
-                       a.startActivity(new Intent(context, MainActivity.class));
+                       Toast.makeText(a.getApplicationContext(), "Account has been created!", Toast.LENGTH_SHORT).show();
+                       a.startActivity(new Intent(a.getApplicationContext(), MainActivity.class));
                        a.finish();
                    } else {
-                       Toast.makeText(context, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                       Toast.makeText(a.getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                    }
                 });
     }
 
-    public static void signInUser (Activity a, FirebaseAuth mAuth, Context context, EditText email, EditText password) {
+    public static void signInUser (Activity a, FirebaseAuth mAuth, EditText email, EditText password) {
 
-        mAuth.signInWithEmailAndPassword(email.getText().toString().trim(), password.getText().toString().trim())
+        String mEmail = email.getText().toString().trim();
+        String mPassword = password.getText().toString();
+
+        mAuth.signInWithEmailAndPassword(mEmail, mPassword)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        a.startActivity(new Intent(context, HomeActivity.class));
+                        a.startActivity(new Intent(a.getApplicationContext(), HomeActivity.class));
                         a.finish();
                     } else {
-                        Toast.makeText(context, "The email or password is not correct", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(a.getApplicationContext(), "The email or password is not correct", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
