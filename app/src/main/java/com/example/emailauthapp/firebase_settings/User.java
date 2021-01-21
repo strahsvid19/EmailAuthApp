@@ -1,11 +1,12 @@
-package com.example.emailauthapp.activities;
+package com.example.emailauthapp.firebase_settings;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.emailauthapp.activities.HomeActivity;
+import com.example.emailauthapp.activities.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 

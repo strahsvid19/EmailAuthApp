@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.emailauthapp.databinding.ActivityMainBinding;
+import com.example.emailauthapp.firebase_settings.User;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {

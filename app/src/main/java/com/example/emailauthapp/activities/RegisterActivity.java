@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.emailauthapp.databinding.ActivityRegisterBinding;
+import com.example.emailauthapp.firebase_settings.User;
+import com.example.emailauthapp.validators.Validators;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity {

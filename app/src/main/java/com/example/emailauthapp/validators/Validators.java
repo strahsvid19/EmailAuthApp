@@ -1,4 +1,4 @@
-package com.example.emailauthapp.activities;
+package com.example.emailauthapp.validators;
 
 import android.util.Patterns;
 import android.widget.EditText;
