@@ -18,4 +18,5 @@
     <string name="current_email">Current email</string>
     <string name="new_email">New email</string>
     <string name="update">Update</string>
+    <string name="new_password">New password</string>
 </resources>
