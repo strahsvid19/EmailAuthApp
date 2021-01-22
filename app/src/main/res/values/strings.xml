@@ -15,4 +15,7 @@
     <string name="log_out">Log out</string>
     <string name="update_email">Update email</string>
     <string name="update_password">Update password</string>
+    <string name="current_email">Current email</string>
+    <string name="new_email">New email</string>
+    <string name="update">Update</string>
 </resources>
