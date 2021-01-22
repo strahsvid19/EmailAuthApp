@@ -51,4 +51,9 @@ public class User {
         Objects.requireNonNull(mAuth.getCurrentUser()).updateEmail(email.getText().toString().trim());
         Toast.makeText(a.getApplicationContext(), "Email has been changed!", Toast.LENGTH_SHORT).show();
     }
+
+    public static void updatePassword (Activity a, FirebaseAuth mAuth, EditText password) {
+        Objects.requireNonNull(mAuth.getCurrentUser()).updatePassword(password.getText().toString());
+        Toast.makeText(a.getApplicationContext(), "Password has been changed!", Toast.LENGTH_SHORT).show();
+    }
 }
