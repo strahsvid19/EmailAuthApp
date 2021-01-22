@@ -9,6 +9,8 @@ import com.example.emailauthapp.activities.HomeActivity;
 import com.example.emailauthapp.activities.MainActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Objects;
+
 
 public class User {
 
@@ -43,5 +45,10 @@ public class User {
                         Toast.makeText(a.getApplicationContext(), "The email or password is not correct", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    public static void updateUserEmail (Activity a, FirebaseAuth mAuth, EditText email) {
+        Objects.requireNonNull(mAuth.getCurrentUser()).updateEmail(email.getText().toString().trim());
+        Toast.makeText(a.getApplicationContext(), "Email has been changed!", Toast.LENGTH_SHORT).show();
     }
 }
