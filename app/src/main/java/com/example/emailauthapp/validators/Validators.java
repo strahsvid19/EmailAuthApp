@@ -11,9 +11,7 @@ public class Validators {
             email.setError("Empty email address");
             email.requestFocus();
             return false;
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString().trim()).matches()) {
-            email.setError("Incorrect email address");
-            email.requestFocus();
+        } else if (!emailValidate(email)) {
             return false;
         }
 
@@ -27,6 +25,15 @@ public class Validators {
             return false;
         }
 
+        return true;
+    }
+
+    public static boolean emailValidate (EditText email) {
+        if (!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString().trim()).matches()) {
+            email.setError("Incorrect email address");
+            email.requestFocus();
+            return false;
+        }
         return true;
     }
 }
