@@ -39,5 +39,8 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
         });
 
+        binding.btnUpdateEmail.setOnClickListener(v -> startActivity(new Intent
+                (this, UpdateEmailActivity.class)));
+
     }
 }
